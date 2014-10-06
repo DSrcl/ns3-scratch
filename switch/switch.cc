@@ -81,6 +81,7 @@ int main (int argc, char *argv[])
 	}
 	//connect switch to switch
 	NetDeviceContainer link = simpleDevice.Install(NodeContainer(switchContainer1.Get(0), switchContainer2));
+	switchDevices1.Add(link.Get(0));
 	switchDevices2.Add(link.Get(1));
 	// connect switch to server
 	link = simpleDevice.Install(NodeContainer(terminalNodes2.Get(2), switchContainer2));
