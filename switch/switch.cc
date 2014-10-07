@@ -42,7 +42,7 @@ NS_LOG_COMPONENT_DEFINE("Switch");
 
 int main (int argc, char *argv[])
 {
-    Time::SetResolution(Time::MS);
+    Time::SetResolution(Time::NS);
 
 
     NodeContainer terminalNodes1;
