@@ -15,9 +15,7 @@ LanHelper lan(deviceHelper);
 Specify your topology with `LanHelper::addConnection` function.  
 While first argument is a smart pointer to the switch node, the second argument is a **NodeContainer** for arbitrary nodes that you want to connect to the switch (you can connect a switch to other switches by including switch node in the second argument).  
 ```cpp
-Ptr<Node> node;
-NodeContainer hosts;
-lan.addConnection(switchNode, hosts);
+lan.addConnection(switchNode, nodesToConnect);
 lan.addConnection(...other links...);
 ```
 Install the specified topology with `LanHelper::install` function.
