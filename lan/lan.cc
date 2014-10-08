@@ -54,8 +54,10 @@ int main(int argc, char* argv[])
     deviceHelper.SetChannelAttribute("Delay", StringValue("2ms"));
 
     LanHelper lan(deviceHelper);
+    // specify topology
     lan.addConnection(switchNodes.Get(0), NodeContainer(switchNodes.Get(1), terminalNodes1));
     lan.addConnection(switchNodes.Get(1), NodeContainer(terminalNodes2, terminalNodes3));
+    // build topology
     NetDeviceContainer terminalDevices = lan.install();
 
     // locate index of the server in terminalDevices
