@@ -25,8 +25,8 @@ lan.addConnection(...other links...);
 ```
 
 3. Install the specified topology with `LanHelper::install` function.
-You receive a **NetDeviceContainer** containing net devices of the terminal nodes, which you can  
-later used to build your network interfaces (e.g. using **Ipv4AddressHelper**  
+The install function returns a **NetDeviceContainer** containing net devices of the terminal nodes,  
+which you can later used to build your network interfaces (e.g. using **Ipv4AddressHelper**  
 to install **Ipv4Interfaces**). Node that this function already uses **InternetStackHelper** to enable  
 a few of NS-3 builtin protocols.
 ```
